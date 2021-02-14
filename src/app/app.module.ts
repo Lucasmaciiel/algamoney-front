@@ -6,6 +6,7 @@ import {ButtonModule} from 'primeng/button';
 import { TableModule } from 'primeng/table';
 
 import { AppComponent } from './app.component';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
