@@ -8,11 +8,15 @@ label {
     font-weight: bold;
 }
 
-@media (min-width: 40em) {
-  .col-valor-header {
-    width: 120px;
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
   }
-
+}
+.col-valor-header {
+  width: 120px;
+}
   .col-valor {
     text-align: right !important;
   }
@@ -37,4 +41,7 @@ label {
   .col-acoes .p-button {
     margin: 1px;
   }
-}
+
+  .navbar-toggle {
+    color: #fff;
+  }
