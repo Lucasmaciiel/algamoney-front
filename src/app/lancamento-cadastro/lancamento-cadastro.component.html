@@ -7,12 +7,18 @@
 
             <div class="p-col-6 p-md-3 p-fluid">
                 <label>Vencimento</label>
-                <input pInputText type="text" required>
+                <p-calendar dateFormat="dd/mm/yy" 
+                    [inline]="false" 
+                    [readonlyInput]="false" 
+                    [showIcon]="true">
+                </p-calendar>
             </div>
 
             <div class="p-col-6 p-md-3 p-fluid">
                 <label>Recimento</label>
-                <input pInputText type="text">
+                <p-calendar dateFormat="dd/mm/yy" 
+                    [showIcon]="true">
+                </p-calendar>
             </div>
 
             <div class="p-col-12 p-md-9 p-fluid">
