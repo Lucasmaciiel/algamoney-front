@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent  {
 
-  constructor() { }
+  exibindoMenu: boolean;
 
-  ngOnInit(): void {
-  }
+ 
 
 }

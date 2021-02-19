@@ -42,4 +42,6 @@ label {
     margin: 1px;
   }
 
-  
+  .p-button {
+    margin-right: .25em
+  }
