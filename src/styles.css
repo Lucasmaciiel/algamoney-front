@@ -8,8 +8,15 @@ a {
   color: #337ab7;
   text-decoration: none;
 }
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
 label {
     font-weight: bold;
+}
+.ui-dropdown-filter-container {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
@@ -47,5 +54,6 @@ label {
   }
 
   .p-button {
-    margin-right: .25em
+    margin-right: .25em;
+  
   }
