@@ -30,14 +30,12 @@
                 <input pInputText type="text"  name="descricao"
                 ngModel #descricao="ngModel"
                 required minlength="5">
-                <div *ngIf="descricao.hasError('required') && descricao.dirty" 
-                    class="ui-message ui-messages-error" >
-                    Informe uma Descrição
-                </div>
-                <div *ngIf="descricao.hasError('minlength') && descricao.dirty" 
-                    class="ui-message ui-messages-error" >
-                    Mínimo de {{ descricao.errors.minlength.requiredLength}} caracteres
-                </div>
+
+                <app-message [control]="descricao" error="required"
+                text="Informe uma descrição"></app-message>
+
+                <app-message [control]="descricao" error="minlength"
+                text=" Mínimo de {{ descricao.errors?.minlength?.requiredLength}} caracteres"></app-message>
             </div>
 
             <div class="p-col-6 p-md-3 p-fluid">
