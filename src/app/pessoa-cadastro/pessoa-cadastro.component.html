@@ -7,17 +7,36 @@
 
             <div class="p-col-12 p-fluid">
                 <label>Nome</label>
-                <input pInputText type="text">
+                <input pInputText type="text" 
+                name="nome"
+                ngModel
+                #nome="ngModel"
+                required
+                minlength="5">
+
+                <app-message [control]="nome" error="required" text="Informe um nome"></app-message>
+                <app-message [control]="nome" error="minlength" 
+                    text="O nome deve conter no mínimo {{ nome.errors?.minlength?.requiredLength}} caracteres"></app-message>
             </div>
 
             <div class="p-col-12 p-md-9 p-fluid">
                 <label>Logradouro</label>
-                <input pInputText type="text">
+                <input pInputText type="text" name="logradouro"
+                ngModel 
+                #logradouro="ngModel"
+                required>
+
+                <app-message [control]="logradouro" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
 
             <div class="p-col-12 p-md-3 p-fluid">
                 <label>Número</label>
-                <input pInputText type="text">
+                <input pInputText type="text"
+                name="numero"
+                ngModel
+                #numero="ngModel"
+                required>
+                <app-message [control]="numero" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
 
             <div class="p-col-12 p-md-4 p-fluid">
@@ -27,22 +46,44 @@
 
             <div class="p-col-12 p-md-4 p-fluid">
                 <label>Bairro</label>
-                <input pInputText type="text">
+                <input pInputText type="text"
+                name="bairro"
+                ngModel
+                #bairro="ngModel"
+                required>
+
+                <app-message [control]="bairro" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
 
             <div class="p-col-12 p-md-4 p-fluid">
                 <label>CEP</label>
-                <p-inputMask  mask="99.999-999"></p-inputMask>
+                <p-inputMask  mask="99.999-999"   
+                name="cep"
+                ngModel
+                #cep="ngModel"
+                required>></p-inputMask>
+
+                <app-message [control]="cep" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
 
             <div class="p-col-12 p-md-6 p-fluid">
                 <label>Cidade</label>
-                <input pInputText type="text">
+                <input pInputText type="text"
+                name="cidade"
+                ngModel
+                #cidade="ngModel"
+                required>
+                <app-message [control]="cidade" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
 
             <div class="p-col-12 p-md-6 p-fluid">
                 <label>Estado</label>
-                <input pInputText type="text">
+                <input pInputText type="text"
+                name="estado"
+                ngModel
+                #estado="ngModel"
+                required>
+                <app-message [control]="estado" error="required" text="Preenchimento obrigatório"></app-message>
             </div>
             <div class="p-col-12">
                 <button pButton type="submit" label="Salvar"></button>
