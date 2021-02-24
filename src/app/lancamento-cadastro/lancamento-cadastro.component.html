@@ -44,15 +44,24 @@
                 currencyMask
                 name="valor"
                 [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false}"
-                ngModel>
+                ngModel
+                required>
             </div>
             <div class="p-col-6 p-md-6 p-fluid">
                 <label>Categoria</label>
-                <p-dropdown [options]="categorias" placeholder="Selecione"></p-dropdown> 
+                <p-dropdown 
+                    [options]="categorias" 
+                    placeholder="Selecione"
+                    required>
+                </p-dropdown> 
             </div>
             <div class="p-col-6 p-md-6 p-fluid">
                 <label>Pessoa</label>
-                <p-dropdown [options]="pessoas" [filter]="true" placeholder="Selecione"></p-dropdown>
+                <p-dropdown [options]="pessoas" 
+                [filter]="true" 
+                placeholder="Selecione"
+                required>
+            </p-dropdown>
             </div>
             <div class="p-col-12 p-fluid">
                 <label>Observação</label>
