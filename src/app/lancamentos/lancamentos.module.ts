@@ -1,6 +1,5 @@
 import { SharedModule } from './../shared/shared.module';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
-import { LancamentosGridComponent } from './lancamentos-grid/lancamentos-grid.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,7 +19,6 @@ import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [
     LancamentoCadastroComponent,
-    LancamentosGridComponent,
     LancamentosPesquisaComponent
   ],
   imports: [

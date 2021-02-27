@@ -56,3 +56,7 @@ label {
   .p-button {
     margin-right: .25em;
   }
+
+  .p-inputtext {
+    width: 100%;
+  }
