@@ -31,9 +31,13 @@
     
     <div class="p-col">
       <div class="p-col-12">
-          <p-table [value]="lancamentos" [paginator]="true" [rows]="5"
-          [responsive]="true" >
-          <ng-template pTemplate="emptymessage">
+          <p-table [value]="lancamentos" [responsive]="true" 
+          [paginator]="true" 
+          [rows]="filtro.itensPorPagina">
+          <ng-template pTemplate="emptymessage"
+          [lazy]="true"
+          [totalRecords]="totalRegistros"
+          (onLazyLoad)="aoMudarPagina($event)">
             <tr>
               <td colspan="6">
                 Nenhum lançamento encontrado
